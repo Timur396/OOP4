@@ -1,28 +1,24 @@
 package Transport;
 
-public abstract class Transp {
+public abstract class Transport {
     private String make;
-private String model;
-private double engineCapacity;
-
-    public Transp(String make, String model, double engineCapacity) {
-        this.make = Validate.validateString(make);
-        this.model = Validate.validateString(model);
+    private String model;
+    private double engineCapacity;
+    public Transport(String make, String model, double engineCapacity) {
+        this.make = Validate.validationString(make);
+        this.model = Validate.validationString(model);
         this.engineCapacity = engineCapacity;
     }
+    abstract void startMove() ;
 
-     abstract void startMovemoment() ;
-
-     abstract void stopMovemoment();
-
-
+    abstract void stopMove();
 
     public String getMake() {
         return make;
     }
 
     public void setMake(String make) {
-        this.make = Validate.validateString(make);
+        this.make = Validate.validationString(make);
     }
 
     public String getModel() {
@@ -30,7 +26,7 @@ private double engineCapacity;
     }
 
     public void setModel(String model) {
-        this.model = Validate.validateString(model);
+        this.model = Validate.validationString(model);
     }
 
     public double getEngineCapacity() {
@@ -41,3 +37,6 @@ private double engineCapacity;
         this.engineCapacity = engineCapacity;
     }
 }
+
+
+
