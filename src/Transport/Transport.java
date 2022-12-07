@@ -4,6 +4,7 @@ public abstract class Transport {
     private String make;
     private String model;
     private double engineCapacity;
+
     public Transport(String make, String model, double engineCapacity) {
         this.make = Validate.validationString(make);
         this.model = Validate.validationString(model);

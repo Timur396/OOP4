@@ -1,10 +1,11 @@
 package Drive;
 
+import Transport.Transport;
 import Transport.Truck;
 
-public class C <T extends Truck>extends Driver{
-    public C(String name, boolean license, Integer experience) {
-        super(name, license, experience);
+public class C extends  Driver<Truck>{
+    public C(String name, boolean license, Integer experience, Truck car) {
+        super(name, license, experience, car);
     }
 
     @Override
