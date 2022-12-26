@@ -8,13 +8,14 @@ public abstract class Driver <T extends Transport>{
     private final String name;
     private final boolean license;
     private final Integer experience;
-    private final T car;
 
-    public Driver(String name, boolean license, Integer experience,T car) {
+
+    public Driver(String name, boolean license, Integer experience) {
         this.name = validationString(name);
         this.license = license;
         this.experience = validateNumber(experience);
-        this.car=car;
+
+
     }
 
     public String getName() {
@@ -33,5 +34,8 @@ public abstract class Driver <T extends Transport>{
     abstract String stop();
     abstract String refuel();
 
-
+    @Override
+    public String toString() {
+        return name;
+    }
 }
