@@ -4,6 +4,8 @@ import static Transport.Validate.*;
 import Transport.Transport;
 import Transport.Validate;
 
+import java.util.*;
+
 public abstract class Driver <T extends Transport>{
     private final String name;
     private final boolean license;
@@ -14,9 +16,8 @@ public abstract class Driver <T extends Transport>{
         this.name = validationString(name);
         this.license = license;
         this.experience = validateNumber(experience);
-
-
     }
+
 
     public String getName() {
         return name;
@@ -33,6 +34,19 @@ public abstract class Driver <T extends Transport>{
     abstract String start();
     abstract String stop();
     abstract String refuel();
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Driver<?> driver = (Driver<?>) o;
+        return license == driver.license && Objects.equals(name, driver.name) && Objects.equals(experience, driver.experience);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, license, experience);
+    }
 
     @Override
     public String toString() {

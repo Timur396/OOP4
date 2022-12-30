@@ -18,7 +18,8 @@ public class PassengerCar extends Transport implements Competing{
                         double engineCapacity,
                         Integer pitStopTime,
                         Integer maxSpeed,
-                        Integer bestLapTime, Mechanic<PassengerCar>... mechanics) {
+                        Integer bestLapTime,
+                        Mechanic<PassengerCar>... mechanics) {
         super(make, model, engineCapacity);
         this.mechanics = new HashSet<>(Arrays.asList(mechanics));
         setDriver(driver);

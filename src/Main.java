@@ -16,7 +16,7 @@ public class Main {
     public static void main(String[] args) {
 //        A dimon = new A("Димон", true, 2);
 //        Mechanic<PassengerCar> petya = new Mechanic<PassengerCar>("Вася", "Марков", "apple");
-//        Mechanic<Truck> denis = new Mechanic<Truck>("Денис", "Пентегов", "завод");
+        Mechanic<Truck> denis = new Mechanic<Truck>("Денис", "Пентегов", "завод");
 //        Mechanic<Bus> pasha = new Mechanic<Bus>("Паша", "Калякин", "престиж");
 //
 //        Sponsor toyota = new Sponsor("Toyota", 1000);
@@ -25,6 +25,8 @@ public class Main {
 //
 //        passengerCar.addSponsor(toyota);
 //        passengerCar.addMechanic(petya);
+
+
         Random random = new Random();
         Set<Integer> numbers = new HashSet<>();
         while (numbers.size() < 20) {
